@@ -100,7 +100,3 @@ Shipment Model
 # Kafka installation
     gem 'karafka'
     gem 'waterdrop'
-
-
-# Running Application
-    
