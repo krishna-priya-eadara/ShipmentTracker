@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shipment_identifier: MyString
+  weight: 1.5
+  height: 1.5
+  source_address: MyString
+  destination_address: MyString
+  source_latitude: 1.5
+  source_longitude: 1.5
+  destination_latitude: 1.5
+  destination_longitude: 1.5
+  current_status: MyString
+
+two:
+  shipment_identifier: MyString
+  weight: 1.5
+  height: 1.5
+  source_address: MyString
+  destination_address: MyString
+  source_latitude: 1.5
+  source_longitude: 1.5
+  destination_latitude: 1.5
+  destination_longitude: 1.5
+  current_status: MyString

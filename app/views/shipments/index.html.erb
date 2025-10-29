@@ -1,0 +1,117 @@
+<div class="flex h-screen w-full" data-controller="shipment-index">
+  <!-- Left Panel - Google Maps Style Listing -->
+  <div class="w-1/4 bg-white border-r border-gray-200 flex flex-col">
+    <!-- Header -->
+    <div class="p-4 border-b border-gray-200 bg-gray-50">
+      <div class="flex items-center justify-between">
+        <div>
+          <h1 class="text-xl font-semibold text-gray-800">Shipment Tracking</h1>
+          <p class="text-sm text-gray-600 mt-1"><%= @shipments.count %> shipments found</p>
+        </div>
+        <%= link_to "GPS Simulator", simulator_path, 
+            class: "bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm font-medium transition-colors" %>
+      </div>
+    </div>
+    
+    <!-- Search Bar -->
+    <div class="p-4 border-b border-gray-200">
+      <div class="relative">
+        <input type="text" 
+               placeholder="Search shipments..." 
+               class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+               data-shipment-index-target="searchInput">
+        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Shipments List -->
+    <div class="flex-1 overflow-y-auto">
+      <% @shipments.each_with_index do |shipment, index| %>
+        <div class="shipment-card p-4 border-b border-gray-100 hover:bg-gray-50 cursor-pointer transition-colors duration-150" 
+             data-action="click->shipment-index#centerMapOnShipment"
+             data-shipment-id="<%= shipment.shipment_identifier %>"
+             data-shipment-index-target="shipmentCard">
+          <!-- Status Badge -->
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+              <%= case shipment.current_status
+                  when 'delivered' then 'bg-green-100 text-green-800'
+                  when 'in_transit' then 'bg-blue-100 text-blue-800'
+                  when 'out_for_delivery' then 'bg-yellow-100 text-yellow-800'
+                  when 'prepared' then 'bg-gray-100 text-gray-800'
+                  when 'picked_up' then 'bg-purple-100 text-purple-800'
+                  when 'exception' then 'bg-red-100 text-red-800'
+                  else 'bg-gray-100 text-gray-800'
+                  end %>">
+              <%= shipment.current_status.humanize %>
+            </span>
+            <span class="text-xs text-gray-500"><%= shipment.created_at.strftime("%d %b") %></span>
+          </div>
+          
+          <!-- Shipment ID -->
+          <h3 class="font-medium text-gray-900 mb-1">
+            <%= link_to shipment_path(shipment.shipment_identifier), class: "hover:text-blue-600 transition-colors duration-150" do %>
+              <%= shipment.shipment_identifier %>
+            <% end %>
+          </h3>
+          
+          <!-- Route Info -->
+          <div class="space-y-1 text-sm text-gray-600">
+            <div class="flex items-start">
+              <div class="w-2 h-2 bg-green-500 rounded-full mt-1.5 mr-2 flex-shrink-0"></div>
+              <div class="flex-1 min-w-0">
+                <p class="truncate"><%= shipment.source_address.split(',').first(2).join(', ') %></p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-2 h-2 bg-red-500 rounded-full mt-1.5 mr-2 flex-shrink-0"></div>
+              <div class="flex-1 min-w-0">
+                <p class="truncate"><%= shipment.destination_address.split(',').first(2).join(', ') %></p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Additional Info -->
+          <div class="flex items-center justify-between mt-3">
+            <div class="flex items-center text-xs text-gray-500">
+              <div class="flex items-center mr-4">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                </svg>
+                <%= shipment.weight %>kg
+              </div>
+              <div class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <%= shipment.created_at.strftime("%H:%M") %>
+              </div>
+            </div>
+            <%= link_to shipment_path(shipment.shipment_identifier), 
+                class: "inline-flex items-center px-3 py-1.5 text-xs font-medium text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors duration-150" do %>
+              <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+              </svg>
+              View Details
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  
+  <!-- Right Panel - Map -->
+  <div class="w-3/4">
+      <div id="map"
+           class="h-full w-full"
+           data-shipment-index-target="map"
+           data-shipment-index-shipments-value="<%= @shipments.to_json %>">
+      </div>
+  </div>
+</div>
+

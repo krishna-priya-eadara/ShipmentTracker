@@ -1,0 +1,44 @@
+[
+  {
+    "shipment_identifier": "SHIP-001-TN-OH-2024",
+    "weight": 15.5,
+    "height": 2.3,
+    "source_address": "Under Armour, Mount Juliet, Wilson County, Middle Tennessee, Tennessee, US-TN, 37122, USA",
+    "destination_address": "Cincinnati Premium Outlets, Premium Outlets Drive, Monroe, Warren County, Ohio, US-OH, 45050, USA",
+    "source_latitude": 36.182487,
+    "source_longitude": -86.469841,
+    "destination_latitude": 39.432393,
+    "destination_longitude": -84.330141,
+    "current_status": "delivered",
+    "created_at": "2024-01-15T08:00:00Z",
+    "updated_at": "2024-01-18T16:30:00Z"
+  },
+  {
+    "shipment_identifier": "SHIP-002-KY-OH-2024",
+    "weight": 8.2,
+    "height": 1.8,
+    "source_address": "Crucible Steel Road, Elizabethtown, Hardin County, Kentucky, US-KY, 42701, USA",
+    "destination_address": "Donald Street, Columbia Township, Cincinnati, Hamilton County, Ohio, US-OH, 45213, USA",
+    "source_latitude": 37.684124,
+    "source_longitude": -85.87799,
+    "destination_latitude": 39.169271,
+    "destination_longitude": -84.423518,
+    "current_status": "in_transit",
+    "created_at": "2024-01-16T09:15:00Z",
+    "updated_at": "2024-01-17T14:20:00Z"
+  },
+  {
+    "shipment_identifier": "SHIP-003-TN-KY-2024",
+    "weight": 22.1,
+    "height": 3.1,
+    "source_address": "Airpark Center East, Nashville-Davidson, Davidson County, Middle Tennessee, Tennessee, US-TN, 37217, USA",
+    "destination_address": "Midfield Access, Louisville, Jefferson County, Kentucky, US-KY, 40213, USA",
+    "source_latitude": 36.104906,
+    "source_longitude": -86.637886,
+    "destination_latitude": 38.169219,
+    "destination_longitude": -85.730341,
+    "current_status": "out_for_delivery",
+    "created_at": "2024-01-17T10:30:00Z",
+    "updated_at": "2024-01-18T11:45:00Z"
+  }
+]

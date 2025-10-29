@@ -1,0 +1,132 @@
+[
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "latitude": 36.182487,
+    "longitude": -86.469841,
+    "recorded_at": 1705305600,
+    "address": "Under Armour, Mount Juliet, Wilson County, Middle Tennessee, Tennessee, US-TN, 37122, USA",
+    "speed": 0.0,
+    "created_at": "2024-01-15T08:00:00Z",
+    "updated_at": "2024-01-15T08:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "latitude": 36.184689,
+    "longitude": -86.460628,
+    "recorded_at": 1705309200,
+    "address": "US-TN, United States, us, Wilson County, 37122, Middle Tennessee, Golden Bear Gateway, Tennessee, Mount Juliet",
+    "speed": 25.5,
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2024-01-15T09:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "latitude": 36.168914,
+    "longitude": -86.518179,
+    "recorded_at": 1705312800,
+    "address": "Adams Lane, Mount Juliet, Wilson County, Middle Tennessee, Tennessee, US-TN, 37122, USA",
+    "speed": 32.1,
+    "created_at": "2024-01-15T10:00:00Z",
+    "updated_at": "2024-01-15T10:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "latitude": 36.104906,
+    "longitude": -86.637886,
+    "recorded_at": 1705316400,
+    "address": "Airpark Center East, Nashville-Davidson, Davidson County, Middle Tennessee, Tennessee, US-TN, 37217, USA",
+    "speed": 28.7,
+    "created_at": "2024-01-15T11:00:00Z",
+    "updated_at": "2024-01-15T11:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "latitude": 37.684124,
+    "longitude": -85.87799,
+    "recorded_at": 1705320000,
+    "address": "Crucible Steel Road, Elizabethtown, Hardin County, Kentucky, US-KY, 42701, USA",
+    "speed": 45.2,
+    "created_at": "2024-01-15T12:00:00Z",
+    "updated_at": "2024-01-15T12:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "latitude": 37.729184,
+    "longitude": -85.879415,
+    "recorded_at": 1705323600,
+    "address": "Gloria Dei Lane, Elizabethtown, Hardin County, Kentucky, US-KY, 42701, USA",
+    "speed": 18.3,
+    "created_at": "2024-01-15T13:00:00Z",
+    "updated_at": "2024-01-15T13:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "latitude": 38.169219,
+    "longitude": -85.730341,
+    "recorded_at": 1705327200,
+    "address": "Midfield Access, Louisville, Jefferson County, Kentucky, US-KY, 40213, USA",
+    "speed": 42.8,
+    "created_at": "2024-01-15T14:00:00Z",
+    "updated_at": "2024-01-15T14:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "latitude": 38.325999,
+    "longitude": -85.522163,
+    "recorded_at": 1705330800,
+    "address": "West Orchard Grass Boulevard, Orchard Grass Hills, Orchard Grass Hills, Oldham County, Kentucky, US-KY, 40014, USA",
+    "speed": 38.9,
+    "created_at": "2024-01-15T15:00:00Z",
+    "updated_at": "2024-01-15T15:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "latitude": 38.637342,
+    "longitude": -85.130018,
+    "recorded_at": 1705334400,
+    "address": "I 71, English, Carrollton, Carroll County, Kentucky, US-KY, 41008, USA",
+    "speed": 55.1,
+    "created_at": "2024-01-15T16:00:00Z",
+    "updated_at": "2024-01-15T16:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "latitude": 38.864488,
+    "longitude": -84.666037,
+    "recorded_at": 1705338000,
+    "address": "Boone County, Kentucky, US-KY, USA",
+    "speed": 48.6,
+    "created_at": "2024-01-15T17:00:00Z",
+    "updated_at": "2024-01-15T17:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "latitude": 39.169271,
+    "longitude": -84.423518,
+    "recorded_at": 1705341600,
+    "address": "Donald Street, Columbia Township, Cincinnati, Hamilton County, Ohio, US-OH, 45213, USA",
+    "speed": 41.2,
+    "created_at": "2024-01-15T18:00:00Z",
+    "updated_at": "2024-01-15T18:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "latitude": 39.440265,
+    "longitude": -84.058999,
+    "recorded_at": 1705345200,
+    "address": "US-OH, United States, us, Warren County, 45054, Jeffery Road, Ohio",
+    "speed": 35.7,
+    "created_at": "2024-01-15T19:00:00Z",
+    "updated_at": "2024-01-15T19:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "latitude": 39.432393,
+    "longitude": -84.330141,
+    "recorded_at": 1705348800,
+    "address": "US-OH, United States, us, Warren County, 400, 45050, Premium Outlets Drive, Cincinnati Premium Outlets, Ohio, Monroe",
+    "speed": 0.0,
+    "created_at": "2024-01-15T20:00:00Z",
+    "updated_at": "2024-01-15T20:00:00Z"
+  }
+]

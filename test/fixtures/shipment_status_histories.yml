@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shipment_id: one
+  status: MyString
+  latitude: 1.5
+  longitude: 1.5
+  address: MyString
+  notes: MyText
+  changed_at: 2025-10-26 06:45:01
+
+two:
+  shipment_id: two
+  status: MyString
+  latitude: 1.5
+  longitude: 1.5
+  address: MyString
+  notes: MyText
+  changed_at: 2025-10-26 06:45:01

@@ -1,0 +1,167 @@
+[
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "status": "prepared",
+    "latitude": 36.182487,
+    "longitude": -86.469841,
+    "address": "Under Armour, Mount Juliet, Wilson County, Middle Tennessee, Tennessee, US-TN, 37122, USA",
+    "notes": "Package prepared and ready for pickup at Under Armour facility",
+    "changed_at": "2024-01-15T08:00:00Z",
+    "created_at": "2024-01-15T08:00:00Z",
+    "updated_at": "2024-01-15T08:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "status": "picked_up",
+    "latitude": 36.184689,
+    "longitude": -86.460628,
+    "address": "US-TN, United States, us, Wilson County, 37122, Middle Tennessee, Golden Bear Gateway, Tennessee, Mount Juliet",
+    "notes": "Package picked up by carrier and en route to distribution center",
+    "changed_at": "2024-01-15T09:00:00Z",
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2024-01-15T09:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "status": "in_transit",
+    "latitude": 36.104906,
+    "longitude": -86.637886,
+    "address": "Airpark Center East, Nashville-Davidson, Davidson County, Middle Tennessee, Tennessee, US-TN, 37217, USA",
+    "notes": "Package in transit through Nashville distribution hub",
+    "changed_at": "2024-01-15T11:00:00Z",
+    "created_at": "2024-01-15T11:00:00Z",
+    "updated_at": "2024-01-15T11:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "status": "in_transit",
+    "latitude": 37.684124,
+    "longitude": -85.87799,
+    "address": "Crucible Steel Road, Elizabethtown, Hardin County, Kentucky, US-KY, 42701, USA",
+    "notes": "Package crossing state line into Kentucky",
+    "changed_at": "2024-01-15T12:00:00Z",
+    "created_at": "2024-01-15T12:00:00Z",
+    "updated_at": "2024-01-15T12:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "status": "in_transit",
+    "latitude": 38.169219,
+    "longitude": -85.730341,
+    "address": "Midfield Access, Louisville, Jefferson County, Kentucky, US-KY, 40213, USA",
+    "notes": "Package passing through Louisville regional distribution center",
+    "changed_at": "2024-01-15T14:00:00Z",
+    "created_at": "2024-01-15T14:00:00Z",
+    "updated_at": "2024-01-15T14:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "status": "in_transit",
+    "latitude": 39.169271,
+    "longitude": -84.423518,
+    "address": "Donald Street, Columbia Township, Cincinnati, Hamilton County, Ohio, US-OH, 45213, USA",
+    "notes": "Package entered Ohio state and approaching Cincinnati area",
+    "changed_at": "2024-01-15T18:00:00Z",
+    "created_at": "2024-01-15T18:00:00Z",
+    "updated_at": "2024-01-15T18:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "status": "out_for_delivery",
+    "latitude": 39.440265,
+    "longitude": -84.058999,
+    "address": "US-OH, United States, us, Warren County, 45054, Jeffery Road, Ohio",
+    "notes": "Package loaded on delivery truck and out for final delivery",
+    "changed_at": "2024-01-15T19:00:00Z",
+    "created_at": "2024-01-15T19:00:00Z",
+    "updated_at": "2024-01-15T19:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-001-TN-OH-2024",
+    "status": "delivered",
+    "latitude": 39.432393,
+    "longitude": -84.330141,
+    "address": "US-OH, United States, us, Warren County, 400, 45050, Premium Outlets Drive, Cincinnati Premium Outlets, Ohio, Monroe",
+    "notes": "Package successfully delivered to Cincinnati Premium Outlets",
+    "changed_at": "2024-01-15T20:00:00Z",
+    "created_at": "2024-01-15T20:00:00Z",
+    "updated_at": "2024-01-15T20:00:00Z"
+  },
+  {
+    "shipment_id": "SHIP-002-KY-OH-2024",
+    "status": "prepared",
+    "latitude": 37.684124,
+    "longitude": -85.87799,
+    "address": "Crucible Steel Road, Elizabethtown, Hardin County, Kentucky, US-KY, 42701, USA",
+    "notes": "Package prepared at steel facility in Elizabethtown",
+    "changed_at": "2024-01-16T09:15:00Z",
+    "created_at": "2024-01-16T09:15:00Z",
+    "updated_at": "2024-01-16T09:15:00Z"
+  },
+  {
+    "shipment_id": "SHIP-002-KY-OH-2024",
+    "status": "picked_up",
+    "latitude": 37.729184,
+    "longitude": -85.879415,
+    "address": "Gloria Dei Lane, Elizabethtown, Hardin County, Kentucky, US-KY, 42701, USA",
+    "notes": "Package picked up and departing Elizabethtown area",
+    "changed_at": "2024-01-16T10:30:00Z",
+    "created_at": "2024-01-16T10:30:00Z",
+    "updated_at": "2024-01-16T10:30:00Z"
+  },
+  {
+    "shipment_id": "SHIP-002-KY-OH-2024",
+    "status": "in_transit",
+    "latitude": 39.169271,
+    "longitude": -84.423518,
+    "address": "Donald Street, Columbia Township, Cincinnati, Hamilton County, Ohio, US-OH, 45213, USA",
+    "notes": "Package in transit to Cincinnati destination",
+    "changed_at": "2024-01-17T14:20:00Z",
+    "created_at": "2024-01-17T14:20:00Z",
+    "updated_at": "2024-01-17T14:20:00Z"
+  },
+  {
+    "shipment_id": "SHIP-003-TN-KY-2024",
+    "status": "prepared",
+    "latitude": 36.104906,
+    "longitude": -86.637886,
+    "address": "Airpark Center East, Nashville-Davidson, Davidson County, Middle Tennessee, Tennessee, US-TN, 37217, USA",
+    "notes": "Heavy machinery shipment prepared at Nashville airpark",
+    "changed_at": "2024-01-17T10:30:00Z",
+    "created_at": "2024-01-17T10:30:00Z",
+    "updated_at": "2024-01-17T10:30:00Z"
+  },
+  {
+    "shipment_id": "SHIP-003-TN-KY-2024",
+    "status": "picked_up",
+    "latitude": 36.100726,
+    "longitude": -86.644114,
+    "address": "US-TN, Nashville-Davidson, United States, us, Davidson County, 37217, Middle Tennessee, Una Recreation Road, Tennessee",
+    "notes": "Heavy machinery picked up and departing Nashville",
+    "changed_at": "2024-01-17T11:45:00Z",
+    "created_at": "2024-01-17T11:45:00Z",
+    "updated_at": "2024-01-17T11:45:00Z"
+  },
+  {
+    "shipment_id": "SHIP-003-TN-KY-2024",
+    "status": "in_transit",
+    "latitude": 37.684124,
+    "longitude": -85.87799,
+    "address": "Crucible Steel Road, Elizabethtown, Hardin County, Kentucky, US-KY, 42701, USA",
+    "notes": "Heavy machinery in transit through Kentucky",
+    "changed_at": "2024-01-17T16:20:00Z",
+    "created_at": "2024-01-17T16:20:00Z",
+    "updated_at": "2024-01-17T16:20:00Z"
+  },
+  {
+    "shipment_id": "SHIP-003-TN-KY-2024",
+    "status": "out_for_delivery",
+    "latitude": 38.169219,
+    "longitude": -85.730341,
+    "address": "Midfield Access, Louisville, Jefferson County, Kentucky, US-KY, 40213, USA",
+    "notes": "Heavy machinery out for delivery in Louisville area",
+    "changed_at": "2024-01-18T11:45:00Z",
+    "created_at": "2024-01-18T11:45:00Z",
+    "updated_at": "2024-01-18T11:45:00Z"
+  }
+]

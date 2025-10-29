@@ -1,0 +1,127 @@
+<div class="min-h-screen bg-gray-50 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900">GPS Simulator Control Panel</h1>
+      <p class="mt-2 text-gray-600">Simulate real-time GPS tracking for shipments using Kafka</p>
+    </div>
+
+    <!-- Control Panel -->
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 mb-8">
+      <div class="px-6 py-4 border-b border-gray-200">
+        <h2 class="text-lg font-semibold text-gray-900">Global Controls</h2>
+      </div>
+      <div class="p-6">
+        <div class="flex space-x-4">
+          <%= button_to "Start All Simulations", simulator_start_all_path, 
+              method: :post, 
+              class: "bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors",
+              confirm: "Start GPS simulation for all shipments? This will generate location updates every 30 seconds." %>
+          
+          <%= button_to "Stop All Simulations", simulator_stop_all_path, 
+              method: :post, 
+              class: "bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors",
+              confirm: "Stop all running simulations?" %>
+        </div>
+        
+        <div class="mt-4 p-4 bg-blue-50 rounded-md">
+          <h3 class="text-sm font-medium text-blue-900">How it works:</h3>
+          <ul class="mt-2 text-sm text-blue-800 space-y-1">
+            <li>• GPS simulator generates realistic location updates along shipment routes</li>
+            <li>• Location updates are published to Kafka <code>shipment_locations</code> topic</li>
+            <li>• Consumer processes updates and creates ShipmentLocation records</li>
+            <li>• Geofence engine automatically updates shipment status based on location</li>
+            <li>• Status changes trigger ShipmentStatusHistory records</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shipments List -->
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+      <div class="px-6 py-4 border-b border-gray-200">
+        <h2 class="text-lg font-semibold text-gray-900">Shipments</h2>
+      </div>
+      <div class="divide-y divide-gray-200">
+        <% @shipments.each do |shipment| %>
+          <div class="p-6 hover:bg-gray-50">
+            <div class="flex items-center justify-between">
+              <div class="flex-1">
+                <div class="flex items-center space-x-3">
+                  <h3 class="text-lg font-medium text-gray-900">
+                    <%= shipment.shipment_identifier %>
+                  </h3>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+                    <%= case shipment.current_status
+                        when 'prepared' then 'bg-blue-100 text-blue-800'
+                        when 'picked_up' then 'bg-yellow-100 text-yellow-800'
+                        when 'in_transit' then 'bg-purple-100 text-purple-800'
+                        when 'out_for_delivery' then 'bg-orange-100 text-orange-800'
+                        when 'delivered' then 'bg-green-100 text-green-800'
+                        else 'bg-gray-100 text-gray-800'
+                        end %>">
+                    <%= shipment.current_status.humanize %>
+                  </span>
+                </div>
+                
+                <div class="mt-2 text-sm text-gray-600">
+                  <p><strong>From:</strong> <%= shipment.source_address %></p>
+                  <p><strong>To:</strong> <%= shipment.destination_address %></p>
+                  <p><strong>Last Updated:</strong> <%= shipment.updated_at.strftime("%B %d, %Y at %I:%M %p") %></p>
+                </div>
+                
+                <div class="mt-2 text-xs text-gray-500">
+                  <p>Locations: <%= shipment.shipment_locations.count %> | Status History: <%= shipment.shipment_status_histories.count %></p>
+                </div>
+              </div>
+              
+              <div class="flex space-x-2">
+                <%= link_to "View Details", shipment_path(shipment), 
+                    class: "text-blue-600 hover:text-blue-900 text-sm font-medium" %>
+                
+                <%= button_to "Simulate Update", 
+                    simulate_update_shipment_path(shipment), 
+                    method: :post, 
+                    class: "bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-xs font-medium transition-colors",
+                    confirm: "Send a single location update for this shipment?" %>
+                
+                <%= button_to "Start Simulation", 
+                    start_simulation_shipment_path(shipment), 
+                    method: :post, 
+                    class: "bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-xs font-medium transition-colors",
+                    confirm: "Start continuous GPS simulation for this shipment?" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- Kafka Status -->
+    <div class="mt-8 bg-white rounded-lg shadow-sm border border-gray-200">
+      <div class="px-6 py-4 border-b border-gray-200">
+        <h2 class="text-lg font-semibold text-gray-900">Kafka Integration Status</h2>
+      </div>
+      <div class="p-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-green-50 p-4 rounded-md">
+            <h3 class="text-sm font-medium text-green-900">Producer</h3>
+            <p class="text-sm text-green-800">ShipmentLocationProducer</p>
+            <p class="text-xs text-green-700">Publishes to: shipment_locations</p>
+          </div>
+          
+          <div class="bg-blue-50 p-4 rounded-md">
+            <h3 class="text-sm font-medium text-blue-900">Consumer</h3>
+            <p class="text-sm text-blue-800">ShipmentLocationsConsumer</p>
+            <p class="text-xs text-blue-700">Processes location updates</p>
+          </div>
+          
+          <div class="bg-purple-50 p-4 rounded-md">
+            <h3 class="text-sm font-medium text-purple-900">Geofence Engine</h3>
+            <p class="text-sm text-purple-800">Automatic status updates</p>
+            <p class="text-xs text-purple-700">Based on distance rules</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
