@@ -100,3 +100,11 @@ Shipment Model
 # Kafka installation
     gem 'karafka'
     gem 'waterdrop'
+
+
+
+Screenshots:
+<img width="1724" height="954" alt="image" src="https://github.com/user-attachments/assets/7a8d0559-662e-4158-86ce-2e3455b11f27" />
+<img width="1726" height="952" alt="image" src="https://github.com/user-attachments/assets/52c927d5-4aad-4afc-b76d-97056c4e0054" />
+
+
