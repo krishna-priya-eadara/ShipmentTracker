@@ -102,7 +102,6 @@ GEM
     concurrent-ruby (1.3.5)
     connection_pool (2.5.4)
     crass (1.0.6)
-    csv (3.3.5)
     date (3.4.1)
     debug (1.11.0)
       irb (~> 1.10)
@@ -124,12 +123,8 @@ GEM
     fugit (1.12.1)
       et-orbi (~> 1.4)
       raabro (~> 1.4)
-    geocoder (1.8.6)
-      base64 (>= 0.1.0)
-      csv (>= 3.0.0)
     globalid (1.3.0)
       activesupport (>= 6.1)
-    haversine (0.3.2)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     image_processing (1.14.0)
@@ -147,7 +142,7 @@ GEM
     jbuilder (2.14.1)
       actionview (>= 7.0.0)
       activesupport (>= 7.0.0)
-    json (2.15.2)
+    json (2.16.0)
     kamal (2.8.1)
       activesupport (>= 7.0)
       base64 (~> 0.2)
@@ -165,35 +160,35 @@ GEM
       karafka-rdkafka (>= 0.22.0)
       waterdrop (>= 2.8.9, < 3.0.0)
       zeitwerk (~> 2.3)
-    karafka-core (2.5.7)
+    karafka-core (2.5.8)
       karafka-rdkafka (>= 0.20.0)
       logger (>= 1.6.0)
-    karafka-rdkafka (0.22.2)
-      ffi (~> 1.15)
+    karafka-rdkafka (0.23.1)
+      ffi (~> 1.17.1)
       json (> 2.0)
       logger
       mini_portile2 (~> 2.6)
       rake (> 12)
-    karafka-rdkafka (0.22.2-aarch64-linux-gnu)
-      ffi (~> 1.15)
+    karafka-rdkafka (0.23.1-aarch64-linux-gnu)
+      ffi (~> 1.17.1)
       json (> 2.0)
       logger
       mini_portile2 (~> 2.6)
       rake (> 12)
-    karafka-rdkafka (0.22.2-arm64-darwin)
-      ffi (~> 1.15)
+    karafka-rdkafka (0.23.1-arm64-darwin)
+      ffi (~> 1.17.1)
       json (> 2.0)
       logger
       mini_portile2 (~> 2.6)
       rake (> 12)
-    karafka-rdkafka (0.22.2-x86_64-linux-gnu)
-      ffi (~> 1.15)
+    karafka-rdkafka (0.23.1-x86_64-linux-gnu)
+      ffi (~> 1.17.1)
       json (> 2.0)
       logger
       mini_portile2 (~> 2.6)
       rake (> 12)
-    karafka-rdkafka (0.22.2-x86_64-linux-musl)
-      ffi (~> 1.15)
+    karafka-rdkafka (0.23.1-x86_64-linux-musl)
+      ffi (~> 1.17.1)
       json (> 2.0)
       logger
       mini_portile2 (~> 2.6)
@@ -247,9 +242,6 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.10-x86_64-linux-musl)
       racc (~> 1.4)
-    oj (3.16.11)
-      bigdecimal (>= 3.0)
-      ostruct (>= 0.2)
     ostruct (0.6.3)
     parallel (1.27.0)
     parser (3.3.9.0)
@@ -316,7 +308,7 @@ GEM
       tsort (>= 0.2)
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
-    rake (13.3.0)
+    rake (13.3.1)
     rdoc (6.15.0)
       erb
       psych (>= 4.0.0)
@@ -417,9 +409,9 @@ GEM
     unicode-emoji (4.1.0)
     uri (1.0.4)
     useragent (0.16.11)
-    waterdrop (2.8.12)
+    waterdrop (2.8.14)
       karafka-core (>= 2.4.9, < 3.0.0)
-      karafka-rdkafka (>= 0.20.0)
+      karafka-rdkafka (>= 0.23.1)
       zeitwerk (~> 2.3)
     web-console (4.2.1)
       actionview (>= 6.0.0)
@@ -452,14 +444,11 @@ DEPENDENCIES
   bundler-audit
   capybara
   debug
-  geocoder
-  haversine
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
   kamal
   karafka
-  oj
   pg (~> 1.1)
   propshaft
   puma (>= 5.0)
